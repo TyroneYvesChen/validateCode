@@ -1,15 +1,3 @@
-var validateCodeOptions = {
-        len:4,
-        callbackFn:function (data) {
-
-        }
-    },
-    validateCodeTestCode = {
-        inputValue:"",
-        callbackFn:function (data) {
-
-        }
-    };
 /**
  * @validateCode
  * @author Tyrone Yves Chen
