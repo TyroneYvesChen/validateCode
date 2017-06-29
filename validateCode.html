@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>验证码验证</title>
+    <style>
+        input{
+            float: left;
+        }
+        div{
+            width: 50px;
+            float: left;
+            border: 1px #ccc solid;
+        }
+
+    </style>
+</head>
+<input type="text" id="inputCode">
+<div id="vCode"></div>
+<div id="btn">触发</div>
+<div id="btn2">确认</div>
+<body>
+<script type="text/javascript" src="validateCode.js"></script>
+<script>
+    var validateCode = new window.validateCode({
+        callbackFn: function (data) {
+            console.log(data);
+            vCode.innerText = data;
+        }
+    });
+    document.getElementById("btn").onclick = function () {
+        validateCode.init();
+    };
+    document.getElementById("btn2").onclick = function () {
+        var val = inputCode.value;
+        var options = {
+            inputValue:val,
+            callbackFn:function (data) {
+                console.log(data)
+            }
+        };
+        validateCode.testCode(options);
+    };
+</script>
+</body>
+</html>
