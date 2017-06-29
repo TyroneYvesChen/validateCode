@@ -36,7 +36,7 @@
 
                }
            },
-           validateCodeTestCode = {
+        validateCodeTestCode = {
                inputValue:"",
                callbackFn:function (data) {
 
